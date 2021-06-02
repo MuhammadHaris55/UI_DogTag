@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 
 class rawer extends StatelessWidget {
   static String pageTitle = "Drawer";
@@ -12,7 +13,7 @@ class rawer extends StatelessWidget {
       ),
       drawer: Drawer(),
       body: Container(
-        color: Colors.themeColor,
+        color: themeColor,
         child: Column(
           children: [
             Row(

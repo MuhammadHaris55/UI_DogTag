@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/register.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
 import 'package:flutter_app111/stylingWidgets/textField.dart';
@@ -70,7 +71,7 @@ class _LoginState extends State<Login> {
                         Text(
                           "Login",
                           style: TextStyle(
-                            color: Colors.themeColor,
+                            color: themeColor,
                             fontWeight: FontWeight.bold,
                             fontSize: MediaQuery.of(context).size.width / 10,
                           ),

@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/login.dart';
 import 'package:flutter_app111/screens/register.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
@@ -123,7 +124,7 @@ class _WelcomeState extends State<Welcome> {
                                 Text(
                                   "Welcome!",
                                   style: TextStyle(
-                                    color: Colors.themeColor,
+                                    color: themeColor,
                                     // fontSize: 30,
                                     fontSize:
                                         MediaQuery.of(context).size.width / 10,

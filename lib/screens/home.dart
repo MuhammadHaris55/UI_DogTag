@@ -1,13 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/contactUs.dart';
 import 'package:flutter_app111/screens/dogInfo.dart';
 import 'package:flutter_app111/screens/inbox.dart';
 import 'package:flutter_app111/screens/login.dart';
 import 'package:flutter_app111/screens/myProfile.dart';
 import 'package:flutter_app111/screens/registerDog_1.dart';
-
-
 
 Row drawerIconRow(String text) {
   return Row(
@@ -230,7 +229,7 @@ Container dataContainer(screen) {
         borderRadius: BorderRadius.circular(15.0),
         boxShadow: [
           BoxShadow(
-            color: Colors.shadowColor,
+            color: shadowColor,
             blurRadius: 5.0,
           ),
         ]),
@@ -294,7 +293,7 @@ class _HomeState extends State<Home> {
 
     return Scaffold(
       key: _scaffoldKey,
-      backgroundColor: Colors.homeColor,
+      backgroundColor: homeColor,
       // appBar: AppBar(
       //   backgroundColor: Colors.white,
       //   leading: Image(
@@ -324,7 +323,7 @@ class _HomeState extends State<Home> {
       endDrawer: Drawer(
         child: Container(
           padding: EdgeInsets.only(top: 30, left: 15),
-          color: Colors.themeColor,
+          color: themeColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -488,13 +487,12 @@ class _HomeState extends State<Home> {
       body: Container(
         child: Stack(
           children: [
-
             SingleChildScrollView(
               child: Center(
                 child: Container(
-                  margin:EdgeInsets.only(top: 110),
+                  margin: EdgeInsets.only(top: 110),
                   width: screen.width / 1.1,
-                  color: Colors.homeColor,
+                  color: homeColor,
                   // margin: EdgeInsets.only(top: 105.0, bottom: 10.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -515,18 +513,18 @@ class _HomeState extends State<Home> {
                             borderRadius: BorderRadius.circular(25.0),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.shadowColor,
+                                color: shadowColor,
                                 blurRadius: 5.0,
                               ),
                             ]),
-                        padding:
-                            EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 10.0, horizontal: 30.0),
                         child: Column(
                           children: [
                             Text(
                               'Add your lost dog report',
                               style: TextStyle(
-                                color: Colors.themeColor,
+                                color: themeColor,
                                 fontSize: screen.width / 14,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -546,13 +544,14 @@ class _HomeState extends State<Home> {
                                 // padding: MaterialStateProperty.all<EdgeInsets>(
                                 //     EdgeInsets.all(20.0)),
                                 foregroundColor:
-                                    MaterialStateProperty.all<Color>(Colors.black),
+                                    MaterialStateProperty.all<Color>(
+                                        Colors.black),
                                 shape: MaterialStateProperty.all<
                                     RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(15.0),
                                     side: BorderSide(
-                                      color: Colors.themeColor,
+                                      color: themeColor,
                                       width: 2,
                                     ),
                                   ),
@@ -585,7 +584,7 @@ class _HomeState extends State<Home> {
                       SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Container(
-                          color: Colors.homeColor,
+                          color: homeColor,
                           child: Row(
                             children: [
                               GestureDetector(
@@ -680,19 +679,19 @@ class _HomeState extends State<Home> {
                             borderRadius: BorderRadius.circular(25.0),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.shadowColor,
+                                color: shadowColor,
                                 blurRadius: 5.0,
                               ),
                             ]),
-                        padding:
-                            EdgeInsets.symmetric(vertical: 10.0, horizontal: 30.0),
+                        padding: EdgeInsets.symmetric(
+                            vertical: 10.0, horizontal: 30.0),
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               'Seen a dog that looks lost?',
                               style: TextStyle(
-                                color: Colors.themeColor,
+                                color: themeColor,
                                 fontSize: screen.width / 14,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -714,7 +713,8 @@ class _HomeState extends State<Home> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => registerDog_1()));
+                                          builder: (context) =>
+                                              registerDog_1()));
                                 },
                                 child: Text(
                                   'ADD REPORT     ->',
@@ -722,14 +722,15 @@ class _HomeState extends State<Home> {
                                 style: ButtonStyle(
                                   // padding: MaterialStateProperty.all<EdgeInsets>(
                                   //     EdgeInsets.all(20.0)),
-                                  foregroundColor: MaterialStateProperty.all<Color>(
-                                      Colors.black),
+                                  foregroundColor:
+                                      MaterialStateProperty.all<Color>(
+                                          Colors.black),
                                   shape: MaterialStateProperty.all<
                                       RoundedRectangleBorder>(
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(15.0),
                                       side: BorderSide(
-                                        color: Colors.themeColor,
+                                        color: themeColor,
                                         width: 2,
                                       ),
                                     ),
@@ -751,9 +752,8 @@ class _HomeState extends State<Home> {
               ),
             ),
             Container(
-
               padding:
-              EdgeInsets.only(left: 10, top: 30, right: 10, bottom: 10),
+                  EdgeInsets.only(left: 10, top: 30, right: 10, bottom: 10),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(30),
@@ -762,7 +762,7 @@ class _HomeState extends State<Home> {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.shadowColor,
+                      color: shadowColor,
                       blurRadius: 5.0,
                     ),
                   ]),
@@ -779,7 +779,7 @@ class _HomeState extends State<Home> {
                     children: [
                       IconButton(
                           icon: Icon(Icons.chat_bubble_outline),
-                          color: Colors.themeColor,
+                          color: themeColor,
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -788,7 +788,7 @@ class _HomeState extends State<Home> {
                           }),
                       IconButton(
                         icon: Icon(Icons.menu),
-                        color: Colors.themeColor,
+                        color: themeColor,
                         onPressed: () =>
                             _scaffoldKey.currentState.openEndDrawer(),
                       ),

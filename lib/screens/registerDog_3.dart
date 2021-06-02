@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/dogConfirmation.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
 
@@ -37,7 +38,9 @@ class _registerDog_3State extends State<registerDog_3> {
                             'images/Dog_Tag-02.png',
                           ),
                         ),
-                        Image(image: AssetImage('images/reg_3.png'),),
+                        Image(
+                          image: AssetImage('images/reg_3.png'),
+                        ),
                         Text(
                           'steps 3 of 3',
                           style: TextStyle(
@@ -110,7 +113,7 @@ class _registerDog_3State extends State<registerDog_3> {
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25.0),
                                     side: BorderSide(
-                                      color: Colors.themeColor,
+                                      color: themeColor,
                                       width: 2,
                                     ),
                                   ),
@@ -136,7 +139,7 @@ class _registerDog_3State extends State<registerDog_3> {
                                   RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(25.0),
                                     side: BorderSide(
-                                      color: Colors.themeColor,
+                                      color: themeColor,
                                       width: 2,
                                     ),
                                   ),

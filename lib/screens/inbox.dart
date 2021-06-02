@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 
 class Inbox extends StatefulWidget {
   @override
@@ -22,10 +23,10 @@ class _InboxState extends State<Inbox> {
                     bottomLeft: Radius.circular(30),
                     bottomRight: Radius.circular(30),
                   ),
-                  color: Colors.themeColor,
+                  color: themeColor,
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.shadowColor,
+                      color: shadowColor,
                       blurRadius: 5.0,
                     ),
                   ]),

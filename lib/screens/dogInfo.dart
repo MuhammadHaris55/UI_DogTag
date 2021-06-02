@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/contactUs.dart';
 import 'package:flutter_app111/screens/home.dart';
 import 'package:flutter_app111/screens/inbox.dart';
 import 'package:flutter_app111/screens/myProfile.dart';
 import 'package:flutter_app111/stylingWidgets/textField.dart';
-
-
 
 class dogInfo extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
@@ -17,7 +16,7 @@ class dogInfo extends StatelessWidget {
       endDrawer: Drawer(
         child: Container(
           padding: EdgeInsets.only(top: 30, left: 15),
-          color: Colors.themeColor,
+          color: themeColor,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -179,7 +178,7 @@ class dogInfo extends StatelessWidget {
         ),
       ),
       body: Container(
-        color: Colors.homeColor,
+        color: homeColor,
         child: Stack(
           children: [
             SizedBox(height: 50),
@@ -198,7 +197,7 @@ class dogInfo extends StatelessWidget {
                           color: Colors.white,
                           boxShadow: [
                             BoxShadow(
-                              color: Colors.shadowColor,
+                              color: shadowColor,
                               blurRadius: 15,
                             ),
                           ],
@@ -222,7 +221,7 @@ class dogInfo extends StatelessWidget {
                                       Text(
                                         'Zoey, Female',
                                         style: TextStyle(
-                                          color: Colors.themeColor,
+                                          color: themeColor,
                                           fontWeight: FontWeight.bold,
                                           fontSize: screen.width / 18,
                                         ),
@@ -263,7 +262,7 @@ class dogInfo extends StatelessWidget {
                             Text(
                               'Dog details',
                               style: TextStyle(
-                                color: Colors.themeColor,
+                                color: themeColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: screen.width / 18,
                               ),
@@ -275,7 +274,7 @@ class dogInfo extends StatelessWidget {
                             Text(
                               'Owner\'s Details',
                               style: TextStyle(
-                                color: Colors.themeColor,
+                                color: themeColor,
                                 fontWeight: FontWeight.bold,
                                 fontSize: screen.width / 15,
                               ),
@@ -310,7 +309,7 @@ class dogInfo extends StatelessWidget {
                                     RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(20.0),
                                       side: BorderSide(
-                                        color: Colors.themeColor,
+                                        color: themeColor,
                                         width: 2,
                                       ),
                                     ),
@@ -340,7 +339,7 @@ class dogInfo extends StatelessWidget {
                     color: Colors.white,
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.shadowColor,
+                        color: shadowColor,
                         blurRadius: 5.0,
                       ),
                     ]),
@@ -357,7 +356,7 @@ class dogInfo extends StatelessWidget {
                       children: [
                         IconButton(
                             icon: Icon(Icons.chat_bubble_outline),
-                            color: Colors.themeColor,
+                            color: themeColor,
                             onPressed: () {
                               Navigator.push(
                                   context,
@@ -366,7 +365,7 @@ class dogInfo extends StatelessWidget {
                             }),
                         IconButton(
                             icon: Icon(Icons.menu),
-                            color: Colors.themeColor,
+                            color: themeColor,
                             onPressed: () {
                               _scaffoldKey.currentState.openEndDrawer();
                             }),

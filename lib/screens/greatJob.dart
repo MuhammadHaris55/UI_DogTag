@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/home.dart';
 
 class GreatJob extends StatelessWidget {
@@ -25,7 +26,7 @@ class GreatJob extends StatelessWidget {
                       Text(
                         'Great job!',
                         style: TextStyle(
-                          color: Colors.themeColor,
+                          color: themeColor,
                           fontWeight: FontWeight.bold,
                           fontSize: screen.width / 9,
                         ),

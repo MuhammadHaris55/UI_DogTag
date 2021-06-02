@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/registerDog_1.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
 import 'package:flutter_app111/stylingWidgets/textField.dart';
@@ -45,7 +46,7 @@ class _RegisterState extends State<Register> {
                       Text(
                         'Owner\'s Details',
                         style: TextStyle(
-                          color: Colors.themeColor,
+                          color: themeColor,
                           fontWeight: FontWeight.bold,
                           fontSize: width / 15,
                         ),

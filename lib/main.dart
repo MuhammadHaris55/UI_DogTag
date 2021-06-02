@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/welcome.dart';
 
 void main() {
@@ -17,7 +18,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-
 class SplashScreen extends StatefulWidget {
   @override
   _SplashScreenState createState() => _SplashScreenState();
@@ -33,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
       // () => Navigator.of(context).pushNamed('/welcome'),
       // Navigator.pushNamed('/welcome');
 
-          () => Navigator.push(
+      () => Navigator.push(
           context, MaterialPageRoute(builder: (context) => Welcome())),
 
       // context, MaterialPageRoute(builder: (context) => Routes())),
@@ -42,15 +42,15 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.themeColor,
+      backgroundColor: themeColor,
       body: Container(
         decoration: BoxDecoration(
             gradient: RadialGradient(
-              colors: [
-                Colors.white,
-                Colors.themeColor,
-              ],
-            )),
+          colors: [
+            Colors.white,
+            themeColor,
+          ],
+        )),
         child: Center(
           child: Container(
             decoration: BoxDecoration(
@@ -66,4 +66,3 @@ class _SplashScreenState extends State<SplashScreen> {
     );
   }
 }
-

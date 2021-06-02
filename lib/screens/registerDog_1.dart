@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_app111/screens/home.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/registerDog_2.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
 import 'package:flutter_app111/stylingWidgets/textField.dart';
@@ -47,11 +47,11 @@ class _registerDog_1State extends State<registerDog_1> {
   Icon first_icon = Icon(
     Icons.circle,
     semanticLabel: 'sajdgh',
-    color: Colors.themeColor,
+    color: themeColor,
   );
   Icon second_icon = Icon(
     Icons.check_circle,
-    color: Colors.themeColor,
+    color: themeColor,
   );
 
   //FOR RADIO BUTTON
@@ -91,7 +91,9 @@ class _registerDog_1State extends State<registerDog_1> {
                           'images/Dog_Tag-02.png',
                         ),
                       ),
-                      Image(image: AssetImage('images/reg_1.png'),),
+                      Image(
+                        image: AssetImage('images/reg_1.png'),
+                      ),
                       Text(
                         'steps 1 of 3',
                         style: TextStyle(
@@ -224,7 +226,7 @@ class _registerDog_1State extends State<registerDog_1> {
             fit: FlexFit.loose,
             child: RadioListTile<String>(
               value: 'Boy',
-              activeColor: Colors.themeColor,
+              activeColor: themeColor,
               groupValue: selectedValue,
               title: Text('Boy'),
               onChanged: (value) => setState(() => selectedValue = value),
@@ -234,7 +236,7 @@ class _registerDog_1State extends State<registerDog_1> {
             fit: FlexFit.tight,
             child: RadioListTile<String>(
               value: 'Girl',
-              activeColor: Colors.themeColor,
+              activeColor: themeColor,
               groupValue: selectedValue,
               title: Text('Girl'),
               onChanged: (value) => setState(() => selectedValue = value),

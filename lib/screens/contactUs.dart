@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/home.dart';
 
 class ContactUs extends StatelessWidget {
@@ -16,17 +17,19 @@ class ContactUs extends StatelessWidget {
             height: 150,
             padding: EdgeInsets.only(left: 10, top: 30, right: 10, bottom: 10),
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-                  bottomLeft: Radius.circular(30),
-                  bottomRight: Radius.circular(30),
+              borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30),
+              ),
+              boxShadow: [
+                BoxShadow(
+                  color: shadowColor,
+                  // color: Colors.shadowColor,
+                  blurRadius: 5.0,
                 ),
-                color: Colors.themeColor,
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.shadowColor,
-                    blurRadius: 5.0,
-                  ),
-                ]),
+              ],
+              color: themeColor,
+            ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -69,7 +72,7 @@ class ContactUs extends StatelessWidget {
                 borderRadius: BorderRadius.circular(25.0),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.shadowColor,
+                    color: shadowColor,
                     blurRadius: 5.0,
                   ),
                 ]),
@@ -97,7 +100,7 @@ class ContactUs extends StatelessWidget {
                         Text(
                           "Contact the team",
                           style: TextStyle(
-                            color: Colors.themeColor,
+                            color: themeColor,
                             fontWeight: FontWeight.bold,
                             fontSize: MediaQuery.of(context).size.width / 15,
                           ),
@@ -112,14 +115,14 @@ class ContactUs extends StatelessWidget {
                         ListTile(
                           leading: Icon(
                             Icons.phone,
-                            color: Colors.themeColor,
+                            color: themeColor,
                           ),
                           title: Text('+(123) 456-789'),
                         ),
                         ListTile(
                           leading: Icon(
                             Icons.email,
-                            color: Colors.themeColor,
+                            color: themeColor,
                           ),
                           title: Text('Loremipsum@gmail.com'),
                         ),

@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/greatJob.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
 import 'package:flutter_app111/stylingWidgets/textField.dart';
@@ -10,7 +11,7 @@ class dogConfirmation extends StatelessWidget {
     final screen = MediaQuery.of(context).size;
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.appbarColor,
+        backgroundColor: appbarColor,
         // leading: Icon(
         //   Icons.arrow_back_ios,
         //   color: Colors.white,
@@ -31,7 +32,7 @@ class dogConfirmation extends StatelessWidget {
                   borderRadius: BorderRadius.circular(25.0),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.shadowColor,
+                      color: shadowColor,
                       blurRadius: 5.0,
                     ),
                   ]),
@@ -74,7 +75,7 @@ class dogConfirmation extends StatelessWidget {
                     Text(
                       'Dog details',
                       style: TextStyle(
-                        color: Colors.themeColor,
+                        color: themeColor,
                         fontWeight: FontWeight.bold,
                         fontSize: screen.width / 18,
                       ),
@@ -96,7 +97,7 @@ class dogConfirmation extends StatelessWidget {
                     Text(
                       'Your profile is almost complete',
                       style: TextStyle(
-                        color: Colors.themeColor,
+                        color: themeColor,
                         fontWeight: FontWeight.bold,
                         fontSize: screen.width / 15,
                       ),

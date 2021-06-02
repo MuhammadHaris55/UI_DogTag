@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/registerDog_3.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
 
@@ -43,7 +44,9 @@ class _registerDog_2State extends State<registerDog_2> {
                             'images/Dog_Tag-02.png',
                           ),
                         ),
-                        Image(image: AssetImage('images/reg_2.png'),),
+                        Image(
+                          image: AssetImage('images/reg_2.png'),
+                        ),
                         Text(
                           'steps 2 of 3',
                           style: TextStyle(
@@ -81,11 +84,11 @@ class _registerDog_2State extends State<registerDog_2> {
                             children: [
                               Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.themeColor,
+                                    color: themeColor,
                                     borderRadius: BorderRadius.circular(25.0),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.shadowColor,
+                                        color: shadowColor,
                                         blurRadius: 5.0,
                                       ),
                                     ]),
@@ -115,7 +118,7 @@ class _registerDog_2State extends State<registerDog_2> {
                                       style: ButtonStyle(
                                         elevation: MaterialStateProperty.all(3),
                                         shadowColor: MaterialStateProperty.all(
-                                            Colors.shadowColor),
+                                            shadowColor),
                                         backgroundColor:
                                             MaterialStateProperty.all<Color>(
                                                 Colors.white),
@@ -136,11 +139,11 @@ class _registerDog_2State extends State<registerDog_2> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.themeColor,
+                                    color: themeColor,
                                     borderRadius: BorderRadius.circular(25.0),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.shadowColor,
+                                        color: shadowColor,
                                         blurRadius: 5.0,
                                       ),
                                     ]),
@@ -170,7 +173,7 @@ class _registerDog_2State extends State<registerDog_2> {
                                       style: ButtonStyle(
                                         elevation: MaterialStateProperty.all(3),
                                         shadowColor: MaterialStateProperty.all(
-                                            Colors.shadowColor),
+                                            shadowColor),
                                         backgroundColor:
                                             MaterialStateProperty.all<Color>(
                                                 Colors.white),
@@ -197,11 +200,11 @@ class _registerDog_2State extends State<registerDog_2> {
                             children: [
                               Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.themeColor,
+                                    color: themeColor,
                                     borderRadius: BorderRadius.circular(25.0),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.shadowColor,
+                                        color: shadowColor,
                                         blurRadius: 5.0,
                                       ),
                                     ]),
@@ -231,7 +234,7 @@ class _registerDog_2State extends State<registerDog_2> {
                                       style: ButtonStyle(
                                         elevation: MaterialStateProperty.all(3),
                                         shadowColor: MaterialStateProperty.all(
-                                            Colors.shadowColor),
+                                            shadowColor),
                                         backgroundColor:
                                             MaterialStateProperty.all<Color>(
                                                 Colors.white),
@@ -252,11 +255,11 @@ class _registerDog_2State extends State<registerDog_2> {
                               ),
                               Container(
                                 decoration: BoxDecoration(
-                                    color: Colors.themeColor,
+                                    color: themeColor,
                                     borderRadius: BorderRadius.circular(25.0),
                                     boxShadow: [
                                       BoxShadow(
-                                        color: Colors.shadowColor,
+                                        color: shadowColor,
                                         blurRadius: 5.0,
                                       ),
                                     ]),
@@ -286,7 +289,7 @@ class _registerDog_2State extends State<registerDog_2> {
                                       style: ButtonStyle(
                                         elevation: MaterialStateProperty.all(3),
                                         shadowColor: MaterialStateProperty.all(
-                                            Colors.shadowColor),
+                                            shadowColor),
                                         backgroundColor:
                                             MaterialStateProperty.all<Color>(
                                                 Colors.white),
@@ -317,7 +320,8 @@ class _registerDog_2State extends State<registerDog_2> {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => registerDog_3()));
+                                          builder: (context) =>
+                                              registerDog_3()));
                                 },
                                 child: Text(
                                   'SKIP',

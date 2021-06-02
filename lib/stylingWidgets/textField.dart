@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app111/screens/appColors.dart';
 
 // ---------------------------------- TEXTFEILD FOR LOGIN SCREEN  -------------- STARTS -----
 BoxDecoration textFeildBoxDeco() {
@@ -7,24 +8,24 @@ BoxDecoration textFeildBoxDeco() {
       color: Colors.white,
       border: Border(
         top: BorderSide(
-          color: Colors.shadowColor,
+          color: shadowColor,
           style: BorderStyle.solid,
         ),
         bottom: BorderSide(
-          color: Colors.shadowColor,
+          color: shadowColor,
         ),
         right: BorderSide(
-          color: Colors.shadowColor,
+          color: shadowColor,
         ),
         left: BorderSide(
-          color: Colors.shadowColor,
+          color: shadowColor,
         ),
       ),
       borderRadius: BorderRadius.circular(10),
       boxShadow: [
         BoxShadow(
           // color: Colors.themeColor,
-          color: Colors.shadowColor,
+          color: shadowColor,
           blurRadius: 10.0,
           // offset: Offset(0, 10),
         ),
@@ -40,7 +41,7 @@ TextFormField textFieldDesign(title, econ) {
         econ,
         // Icons.person_pin,
 
-        color: Colors.themeColor,
+        color: themeColor,
       ),
       border: InputBorder.none,
       // focusedBorder: InputBorder.none,
