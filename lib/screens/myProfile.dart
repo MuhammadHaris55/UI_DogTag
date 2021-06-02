@@ -8,7 +8,14 @@ class MyProfile extends StatelessWidget {
     final screen = MediaQuery.of(context).size;
     return Scaffold(
         appBar: AppBar(
-          title: Text("My Profile"),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(Icons.arrow_back_ios),
+            color: Colors.white,
+          ),
+          title: Center(child: Text("My Profile")),
           backgroundColor: appbarColor,
           actions: [
             IconButton(

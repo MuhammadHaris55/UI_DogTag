@@ -12,14 +12,22 @@ class dogConfirmation extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: appbarColor,
-        // leading: Icon(
-        //   Icons.arrow_back_ios,
-        //   color: Colors.white,
-        // ),
-        title: Text(
-          'Confirmation',
-          style: TextStyle(
-            color: Colors.white,
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: Icon(Icons.arrow_back_ios),
+          color: Colors.white,
+        ),
+        title: Center(
+          child: Container(
+            padding: EdgeInsets.only(right: screen.width / 8),
+            child: Text(
+              'Confirmation',
+              style: TextStyle(
+                color: Colors.white,
+              ),
+            ),
           ),
         ),
       ),
