@@ -3,6 +3,7 @@ import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/contactUs.dart';
 import 'package:flutter_app111/screens/home.dart';
 import 'package:flutter_app111/screens/inbox.dart';
+import 'package:flutter_app111/screens/login.dart';
 import 'package:flutter_app111/screens/myProfile.dart';
 import 'package:flutter_app111/stylingWidgets/textField.dart';
 
@@ -103,16 +104,16 @@ class dogInfo extends StatelessWidget {
                   child: drawerIconRow('My profile'),
                 ),
               ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Home()));
-                  },
-                  child: drawerIconRow('My dog\'s'),
-                ),
-              ),
+              // Container(
+              //   width: screen.width / 1.8,
+              //   child: TextButton(
+              //     onPressed: () {
+              //       Navigator.push(context,
+              //           MaterialPageRoute(builder: (context) => GreatJob()));
+              //     },
+              //     child: drawerIconRow('My dog\'s'),
+              //   ),
+              // ),
               Divider(
                 thickness: 2.0,
                 color: Colors.black,
@@ -167,8 +168,8 @@ class dogInfo extends StatelessWidget {
                 width: screen.width / 1.8,
                 child: TextButton(
                   onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Home()));
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Login()));
                   },
                   child: drawerRow('Log out'),
                 ),
