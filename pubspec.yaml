@@ -33,6 +33,8 @@ dependencies:
   flutter_spinkit: ^4.1.1
   font_awesome_flutter: ^9.0.0
 
+  image_picker: ^0.8.0+1
+
 
 dev_dependencies:
   flutter_test:

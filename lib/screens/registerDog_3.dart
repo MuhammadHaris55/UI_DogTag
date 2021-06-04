@@ -1,7 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_app111/screens/appColors.dart';
 import 'package:flutter_app111/screens/dogConfirmation.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
+import 'package:image_picker/image_picker.dart';
 
 class registerDog_3 extends StatefulWidget {
   @override
@@ -9,6 +12,40 @@ class registerDog_3 extends StatefulWidget {
 }
 
 class _registerDog_3State extends State<registerDog_3> {
+//FUNCTIONS AND VARIABLES TO CHOOSE AND CLICK IMAGE  AND IT ON FIRESTORE------------ STARTS -----------------------
+  File _imageFile;
+  final picker = ImagePicker();
+
+  Future pickImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.gallery);
+
+    setState(() {
+      _imageFile = File(pickedFile.path);
+    });
+  }
+
+  Future clickImage() async {
+    final pickedFile = await picker.getImage(source: ImageSource.camera);
+
+    setState(() {
+      _imageFile = File(pickedFile.path);
+    });
+  }
+
+//TO UPLOAD IMAGE ON FIRESTORE
+  // Future uploadImageToFirebase(BuildContext context) async {
+  //   String fileName = basename(_imageFile.path);
+  //   StorageReference firebaseStorageRef =
+  //       FirebaseStorage,instance.ref().child('uploads/$fileName');
+  //   StorageUploadTask uploadTask = firebaseStorageRef.putFile(_imageFile);
+  //   StorageTaskSnapshot taskSnapshot = await uploadTask.onComplete;
+  //   taskSnapshot.ref.getDownloadURL().then(
+  //   (value) => print("Done: $value"),
+  //   );
+  // }
+
+//FUNCTIONS AND VARIABLES TO CHOOSE AND CLICK IMAGE  AND IT ON FIRESTORE ------------ ENDS -----------------------
+
   @override
   Widget build(BuildContext context) {
     final screen = MediaQuery.of(context).size;
@@ -84,19 +121,25 @@ class _registerDog_3State extends State<registerDog_3> {
                                 //   ),
                                 // ],
                               ),
-                              child: Image(
-                                image: AssetImage(
-                                  'images/UploadDogPic_3.png',
-                                ),
-                              ),
-                              // width: screen.width / 2.7,
-                              // height: screen.width / 2.7,
+                              child: _imageFile != null
+                                  ? Image.file(
+                                      _imageFile,
+                                    )
+                                  : TextButton(
+                                      child: Icon(
+                                        Icons.add_a_photo,
+                                        size: 50,
+                                        color: Colors.black,
+                                      ),
+                                      onPressed: clickImage,
+                                    ),
                             ),
                             SizedBox(height: 10.0),
                             TextButton(
-                              onPressed: () {
-                                // Navigator.push(context, MaterialPageRoute(builder: (context) => registerDog1()));
-                              },
+                              onPressed: pickImage,
+                              //     () {
+                              //   // Navigator.push(context, MaterialPageRoute(builder: (context) => registerDog1()));
+                              // },
                               child: Text(
                                 'Choose from gallery',
                               ),
@@ -121,9 +164,10 @@ class _registerDog_3State extends State<registerDog_3> {
                             ),
                             SizedBox(height: 10.0),
                             TextButton(
-                              onPressed: () {
-                                // Navigator.push(context, MaterialPageRoute(builder: (context) => registerDog1()));
-                              },
+                              onPressed: clickImage,
+                              //     () {
+                              //   // Navigator.push(context, MaterialPageRoute(builder: (context) => registerDog1()));
+                              // },
                               child: Text(
                                 'Take a photo',
                               ),
