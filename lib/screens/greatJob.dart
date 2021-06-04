@@ -15,7 +15,6 @@ class GreatJob extends StatelessWidget {
                 Image(
                   image: AssetImage(
                     'images/GreatJob.png',
-                    // 'images/GreatJob_1.png',
                   ),
                 ),
                 Spacer(),

@@ -5,7 +5,6 @@ import 'package:flutter_app111/screens/appColors.dart';
 Container button_design(screen, String text) {
   return Container(
     height: 58,
-    // height: MediaQuery.of(context).size.height / 10,
     width: screen.width / 1.1,
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),

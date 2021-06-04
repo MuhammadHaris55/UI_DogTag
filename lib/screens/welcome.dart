@@ -7,9 +7,6 @@ import 'package:flutter_app111/screens/register.dart';
 import 'package:flutter_app111/stylingWidgets/button.dart';
 
 class Welcome extends StatefulWidget {
-  static String pageTitle = "Welcome";
-  static String routeName = "/welcome";
-
   @override
   _WelcomeState createState() => _WelcomeState();
 }
@@ -125,7 +122,6 @@ class _WelcomeState extends State<Welcome> {
                                   "Welcome!",
                                   style: TextStyle(
                                     color: themeColor,
-                                    // fontSize: 30,
                                     fontSize:
                                         MediaQuery.of(context).size.width / 10,
                                     fontFamily: "Popins",
@@ -156,14 +152,9 @@ class _WelcomeState extends State<Welcome> {
                       height: 15,
                     ),
                     ElevatedButton(
-                      // shape: RoundedRectangleBorder(
-                      //   borderRadius: BorderRadius.circular(10.0),
-                      // ),
-                      // padding: EdgeInsets.zero,
                       style: buttonDesign,
                       child: button_design(screen, "LOGIN"),
                       onPressed: () {
-                        // Navigator.of(context).pushNamed('/login');
                         Navigator.push(context,
                             MaterialPageRoute(builder: (context) => Login()));
                       },
@@ -180,7 +171,6 @@ class _WelcomeState extends State<Welcome> {
                       style: buttonDesign,
                       child: button_design(screen, "SIGN UP"),
                       onPressed: () {
-                        // Navigator.of(context).pushNamed('/register');
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -197,49 +187,6 @@ class _WelcomeState extends State<Welcome> {
                   ],
                 ),
               ),
-
-              // Container(
-              //   // margin: EdgeInsets.only(top: 20),
-              //   height: 400,
-              //   child: Container(
-              //     alignment: Alignment.topRight,
-              //     decoration: BoxDecoration(
-              //       //
-              //       image: DecorationImage(
-              //         image: AssetImage(
-              //           'images/Dog tag-2.png',
-              //         ),
-              //       ),
-              //       //
-              //       color: Colors.themeColor,
-              //       // borderRadius: BorderRadius.circular(50)),
-              //       borderRadius: BorderRadius.only(
-              //         topLeft: Radius.circular(60),
-              //         topRight: Radius.circular(60),
-              //       ),
-              //     ),
-              //     child: ClipRRect(
-              //       // borderRadius: BorderRadius.circular(100),
-              //       child: Align(
-              //         child: Container(
-              //           // alignment: Alignment.topRight,
-              //           // child: Center(
-              //           child: Container(
-              //             height: 100,
-              //             width: 100,
-              //             decoration: BoxDecoration(
-              //               image: DecorationImage(
-              //                 image: AssetImage(
-              //                   'images/Dog tag-2.png',
-              //                 ),
-              //               ),
-              //             ),
-              //           ),
-              //         ),
-              //       ),
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),

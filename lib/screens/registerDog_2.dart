@@ -63,7 +63,6 @@ class _registerDog_2State extends State<registerDog_2> {
                 width: screen.width / 1.1,
                 padding: EdgeInsets.symmetric(vertical: 20.0),
                 child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(

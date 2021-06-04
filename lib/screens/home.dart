@@ -1,12 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_app111/screens/appColors.dart';
-import 'package:flutter_app111/screens/contactUs.dart';
 import 'package:flutter_app111/screens/dogInfo.dart';
 import 'package:flutter_app111/screens/inbox.dart';
-import 'package:flutter_app111/screens/login.dart';
-import 'package:flutter_app111/screens/myProfile.dart';
 import 'package:flutter_app111/screens/registerDog_1.dart';
+import 'package:flutter_app111/stylingWidgets/drawer.dart';
 
 Row drawerIconRow(String text) {
   return Row(
@@ -41,181 +39,6 @@ Row drawerRow(String text) {
         ),
       ),
     ],
-  );
-}
-
-// Drawer _drawer(screen) {
-//   return Drawer(
-//     child: Container(
-//       padding: EdgeInsets.only(top: 30, left: 15),
-//       color: Colors.themeColor,
-//       child: Column(
-//         crossAxisAlignment: CrossAxisAlignment.start,
-//         children: [
-//           Container(
-//             width: screen.width / 1.3,
-//             child: Row(
-//               children: [
-//                 CircleAvatar(
-//                   backgroundColor: Colors.white,
-//                   child: Image(
-//                     image: AssetImage(
-//                       'images/drawer-profile-pic.png',
-//                     ),
-//                     fit: BoxFit.fill,
-//                   ),
-//                   radius: 25,
-//                 ),
-//                 SizedBox(width: 10),
-//                 Wrap(
-//                   children: [
-//                     Column(
-//                       crossAxisAlignment: CrossAxisAlignment.start,
-//                       children: [
-//                         Text(
-//                           'Spike',
-//                           style: TextStyle(
-//                             fontWeight: FontWeight.bold,
-//                             color: Colors.white,
-//                             letterSpacing: 1,
-//                           ),
-//                         ),
-//                         Text(
-//                           'Lorem ipsum',
-//                           style: TextStyle(
-//                             color: Colors.white,
-//                             letterSpacing: 1,
-//                           ),
-//                         ),
-//                       ],
-//                     ),
-//                   ],
-//                 ),
-//                 Spacer(),
-//                 IconButton(
-//                   iconSize: 50,
-//                   icon: Icon(
-//                     Icons.cancel_sharp,
-//                     color: Colors.black,
-//                   ),
-//                 ),
-//               ],
-//             ),
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerIconRow('Home'),
-//             ),
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerIconRow('Inbox'),
-//             ),
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerIconRow('My profile'),
-//             ),
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerIconRow('My dog\'s'),
-//             ),
-//           ),
-//           Divider(
-//             thickness: 2.0,
-//             color: Colors.black,
-//             endIndent: screen.width / 8,
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerRow('The Dog Tag Mission'),
-//             ),
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerRow('Contact us'),
-//             ),
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerRow('Privacy policy'),
-//             ),
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerRow('Term and conditions'),
-//             ),
-//           ),
-//           Divider(
-//             thickness: 2.0,
-//             color: Colors.black,
-//             endIndent: screen.width / 8,
-//           ),
-//           Container(
-//             width: screen.width / 1.8,
-//             child: TextButton(
-//               onPressed: () {
-//                 // Navigator.push(context,
-//                 //     MaterialPageRoute(builder: (context) => Home()));
-//               },
-//               child: drawerRow('Log out'),
-//             ),
-//           ),
-//         ],
-//       ),
-//     ),
-//   );
-// }
-
-TextButton drawer_btn(String buttonText) {
-  return TextButton(
-    style: ButtonStyle(),
-    onPressed: () {},
-    child: Text(
-      buttonText,
-      style: TextStyle(color: Colors.white),
-    ),
   );
 }
 
@@ -254,7 +77,6 @@ Container dataContainer(screen) {
         Container(
           padding: EdgeInsets.only(left: 5.0),
           child: Text(
-            // 'kfjghsdk lskdjf sdklfj',
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod'
             'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod',
             maxLines: 4,
@@ -270,22 +92,11 @@ Container dataContainer(screen) {
 }
 
 class Home extends StatefulWidget {
-  static String pageTitle = "Home";
-  static String routeName = "/";
-
   @override
   _HomeState createState() => _HomeState();
 }
 
 class _HomeState extends State<Home> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   @override
   Widget build(BuildContext context) {
@@ -294,196 +105,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       key: _scaffoldKey,
       backgroundColor: homeColor,
-      // appBar: AppBar(
-      //   backgroundColor: Colors.white,
-      //   leading: Image(
-      //     image: AssetImage(
-      //       'images/Dog_Tag-03.png',
-      //     ),
-      //   ),
-      //   leadingWidth: screen.width,
-      //   actions: <Widget>[
-      //     IconButton(
-      //       color: Colors.themeColor,
-      //       icon: Icon(Icons.chat_bubble_outline),
-      //       onPressed: () {
-      //         // showSearch(context: context, delegate: searchBar());
-      //       },
-      //     ),
-      //     IconButton(
-      //       color: Colors.themeColor,
-      //       icon: Icon(Icons.menu),
-      //       onPressed: () {
-      //         // showSearch(context: context, delegate: searchBar());
-      //       },
-      //     ),
-      //   ],
-      // ),
-      // drawer: _drawer(screen),
-      endDrawer: Drawer(
-        child: Container(
-          padding: EdgeInsets.only(top: 30, left: 15),
-          color: themeColor,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                width: screen.width / 1.3,
-                child: Row(
-                  children: [
-                    CircleAvatar(
-                      backgroundColor: Colors.white,
-                      child: Image(
-                        image: AssetImage(
-                          'images/drawer-profile-pic.png',
-                        ),
-                        fit: BoxFit.fill,
-                      ),
-                      radius: 25,
-                    ),
-                    SizedBox(width: 10),
-                    Wrap(
-                      children: [
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'Spike',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                color: Colors.white,
-                                letterSpacing: 1,
-                              ),
-                            ),
-                            Text(
-                              'Lorem ipsum',
-                              style: TextStyle(
-                                color: Colors.white,
-                                letterSpacing: 1,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Spacer(),
-                    IconButton(
-                      iconSize: 50,
-                      icon: Icon(
-                        Icons.cancel_sharp,
-                        color: Colors.black,
-                      ),
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Home()));
-                  },
-                  child: drawerIconRow('Home'),
-                ),
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Inbox()));
-                  },
-                  child: drawerIconRow('Inbox'),
-                ),
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => MyProfile()));
-                  },
-                  child: drawerIconRow('My profile'),
-                ),
-              ),
-              // Container(
-              //   width: screen.width / 1.8,
-              //   child: TextButton(
-              //     onPressed: () {
-              //       Navigator.push(context,
-              //           MaterialPageRoute(builder: (context) => GreatJob()));
-              //     },
-              //     child: drawerIconRow('My dog\'s'),
-              //   ),
-              // ),
-              Divider(
-                thickness: 2.0,
-                color: Colors.black,
-                endIndent: screen.width / 8,
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Home()));
-                  },
-                  child: drawerRow('The Dog Tag Mission'),
-                ),
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => ContactUs()));
-                  },
-                  child: drawerRow('Contact us'),
-                ),
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Home()));
-                  },
-                  child: drawerRow('Privacy policy'),
-                ),
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    // Navigator.push(context,
-                    //     MaterialPageRoute(builder: (context) => Home()));
-                  },
-                  child: drawerRow('Term and conditions'),
-                ),
-              ),
-              Divider(
-                thickness: 2.0,
-                color: Colors.black,
-                endIndent: screen.width / 8,
-              ),
-              Container(
-                width: screen.width / 1.8,
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Login()));
-                  },
-                  child: drawerRow('Log out'),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
+      endDrawer: MainDrawer(),
       body: Container(
         child: Stack(
           children: [
@@ -493,7 +115,6 @@ class _HomeState extends State<Home> {
                   margin: EdgeInsets.only(top: 110),
                   width: screen.width / 1.1,
                   color: homeColor,
-                  // margin: EdgeInsets.only(top: 105.0, bottom: 10.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -509,14 +130,15 @@ class _HomeState extends State<Home> {
                       SizedBox(height: 15),
                       Container(
                         decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(25.0),
-                            boxShadow: [
-                              BoxShadow(
-                                color: shadowColor,
-                                blurRadius: 5.0,
-                              ),
-                            ]),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(25.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: shadowColor,
+                              blurRadius: 5.0,
+                            ),
+                          ],
+                        ),
                         padding: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 30.0),
                         child: Column(
@@ -564,21 +186,22 @@ class _HomeState extends State<Home> {
                       SizedBox(height: 15),
                       RichText(
                         text: TextSpan(
-                            text: 'Lost Dogs',
-                            style: TextStyle(
-                              color: Colors.red,
-                              fontWeight: FontWeight.bold,
-                              fontSize: screen.width / 18,
-                            ),
-                            children: [
-                              TextSpan(
-                                text: ' Near Me',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                              )
-                            ]),
+                          text: 'Lost Dogs',
+                          style: TextStyle(
+                            color: Colors.red,
+                            fontWeight: FontWeight.bold,
+                            fontSize: screen.width / 18,
+                          ),
+                          children: [
+                            TextSpan(
+                              text: ' Near Me',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            )
+                          ],
+                        ),
                       ),
                       SizedBox(height: 15),
                       SingleChildScrollView(
@@ -675,14 +298,15 @@ class _HomeState extends State<Home> {
                       SizedBox(height: 15),
                       Container(
                         decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(25.0),
-                            boxShadow: [
-                              BoxShadow(
-                                color: shadowColor,
-                                blurRadius: 5.0,
-                              ),
-                            ]),
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(25.0),
+                          boxShadow: [
+                            BoxShadow(
+                              color: shadowColor,
+                              blurRadius: 5.0,
+                            ),
+                          ],
+                        ),
                         padding: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 30.0),
                         child: Column(
@@ -738,10 +362,6 @@ class _HomeState extends State<Home> {
                                 ),
                               ),
                             ),
-                            // ElevatedButton(
-                            //   onPressed: () {},
-                            //   child: Text('ADD YOUR DOG'),
-                            // ),
                           ],
                         ),
                       ),
@@ -755,17 +375,18 @@ class _HomeState extends State<Home> {
               padding:
                   EdgeInsets.only(left: 10, top: 30, right: 10, bottom: 10),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(30),
-                    bottomRight: Radius.circular(30),
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(30),
+                  bottomRight: Radius.circular(30),
+                ),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: shadowColor,
+                    blurRadius: 5.0,
                   ),
-                  color: Colors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: shadowColor,
-                      blurRadius: 5.0,
-                    ),
-                  ]),
+                ],
+              ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -778,14 +399,13 @@ class _HomeState extends State<Home> {
                   Row(
                     children: [
                       IconButton(
-                          icon: Icon(Icons.chat_bubble_outline),
-                          color: themeColor,
-                          onPressed: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => Inbox()));
-                          }),
+                        icon: Icon(Icons.chat_bubble_outline),
+                        color: themeColor,
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => Inbox()));
+                        },
+                      ),
                       IconButton(
                         icon: Icon(Icons.menu),
                         color: themeColor,
@@ -797,68 +417,9 @@ class _HomeState extends State<Home> {
                 ],
               ),
             ),
-            // SizedBox(height: 10.0),
           ],
         ),
       ),
     );
   }
 }
-
-//--------------------------------------------- Image TRANSITION -starts
-//   body: SizedBox(
-//   width: 300,
-// child: Hero(
-// tag: Image.asset(
-//     'images/Dog tag-2.png',
-//   ),
-// child: Material(
-// color: Colors.transparent,
-// child:
-// // InkWell(
-// // onTap: (){
-//   Image.asset(
-//     'images/Dog tag-2.png',
-//     fit: BoxFit.contain,
-//   // );
-//
-// // }
-// ),
-// ),
-// ),
-// ),
-//---------------------------------------------Image TRANSITION --------------------ends
-
-// ------------------------------------ default flutter app -----------starts
-// body: Center(
-//   child: Column(
-//     mainAxisAlignment: MainAxisAlignment.center,
-//     children: <Widget>[
-//       Text(
-//         'You have pushed the button this many times:',
-//       ),
-//       Text(
-//         '$_counter',
-//         style: Theme.of(context).textTheme.headline4,
-//       ),
-//     ],
-//   ),
-// ),
-// floatingActionButton: FloatingActionButton(
-// onPressed: _incrementCounter,
-// tooltip: 'Increment',
-// child: Icon(Icons.add),
-// ) // This trailing comma makes auto-formatting nicer for build methods.
-// ------------------------------------ default flutter app ----------- ends
-
-//------------------------------------------ RadientColor --- starts
-// body: Container(
-//       decoration: BoxDecoration(
-//           gradient: RadialGradient(
-//             colors: [
-//               Colors.white,
-//               Colors.themeColor,
-//             ],
-//           ),
-//       ),
-//------------------------------------------ RadientColor --- starts

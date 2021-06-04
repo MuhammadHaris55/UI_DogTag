@@ -8,8 +8,6 @@ class ContactUs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screen = MediaQuery.of(context).size;
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     return Scaffold(
       body: Stack(
         children: [
@@ -24,7 +22,6 @@ class ContactUs extends StatelessWidget {
               boxShadow: [
                 BoxShadow(
                   color: shadowColor,
-                  // color: Colors.shadowColor,
                   blurRadius: 5.0,
                 ),
               ],
@@ -158,78 +155,3 @@ class ContactUs extends StatelessWidget {
     );
   }
 }
-
-//GREAT JOB PAGE
-// return Scaffold(
-// body: Column(
-// children: [
-// Container(
-// decoration: BoxDecoration(
-// image: DecorationImage(
-// image: AssetImage(
-// 'images/contact_pic.jpg',
-// ),
-// fit: BoxFit.cover,
-// )
-// ),
-// height:height/4,
-// ),
-// Container(
-// child: Column(
-// mainAxisAlignment: MainAxisAlignment.end,
-// crossAxisAlignment: CrossAxisAlignment.center,
-// children: [
-//
-// Text(
-// "Great Job!",
-// style: TextStyle(
-// color: Colors.themeColor,
-// fontSize:MediaQuery.of(context).size.width/6.5,
-// fontWeight: FontWeight.bold,
-// ),
-// ),
-// SizedBox(height: 10),
-// Container(
-// child: Text("Your report has been sent to all member!",
-// textAlign: TextAlign.center,
-// style: TextStyle(
-// // backgroundColor:Colors.lightBlueAccent,
-// fontSize:width/15,
-// fontWeight: FontWeight.bold,
-// ),
-// ),
-// width: width/1.4,
-// height: height/9,
-// ),
-//
-// Container(
-// child: Text("You can share this app with your friend and family member to help find the missing dogs",
-// textAlign: TextAlign.center,
-// style: TextStyle(
-// color: Colors.shadowColor,
-// fontSize:width/28,
-// fontWeight: FontWeight.bold,
-// ),
-// ),
-// width: width/1.3,
-// // height: height/5,
-// )
-// ],
-// ),
-// height: height - (height/5 + height/4),
-// ),
-// Container(
-// // color: Colors.amberAccent,
-// decoration: BoxDecoration(
-// image: DecorationImage(
-// image: AssetImage(
-// 'images/contact_pic.jpg',
-// ),
-// fit: BoxFit.cover,
-// )
-// ),
-// height:height/5,
-// ),
-// ],
-// ),
-// );

@@ -83,12 +83,6 @@ class _InboxState extends State<Inbox> {
                   topRight: Radius.circular(30),
                 ),
                 color: Colors.white,
-                // boxShadow: [
-                //   BoxShadow(
-                //     color: Colors.shadowColor,
-                //     blurRadius: 5.0,
-                //   ),
-                // ],
               ),
               margin: EdgeInsets.only(top: 110.0),
               padding: EdgeInsets.symmetric(vertical: 20.0, horizontal: 10.0),

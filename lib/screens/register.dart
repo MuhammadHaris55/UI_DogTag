@@ -6,9 +6,6 @@ import 'package:flutter_app111/stylingWidgets/button.dart';
 import 'package:flutter_app111/stylingWidgets/textField.dart';
 
 class Register extends StatefulWidget {
-  static String pageTitle = "Register";
-  static String routeName = "/register";
-
   @override
   _RegisterState createState() => _RegisterState();
 }
@@ -16,21 +13,19 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   @override
   Widget build(BuildContext context) {
-    final width = MediaQuery.of(context).size.width;
-    final height = MediaQuery.of(context).size.height;
     final screen = MediaQuery.of(context).size;
     return Scaffold(
       body: SingleChildScrollView(
         child: Center(
           child: Container(
-            width: width / 1.1,
+            width: screen.width / 1.1,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(height: 10),
                 Container(
-                  height: height / 5,
-                  width: width / 1.5,
+                  height: screen.height / 5,
+                  width: screen.width / 1.5,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
@@ -48,7 +43,7 @@ class _RegisterState extends State<Register> {
                         style: TextStyle(
                           color: themeColor,
                           fontWeight: FontWeight.bold,
-                          fontSize: width / 15,
+                          fontSize: screen.width / 15,
                         ),
                       ),
                       SizedBox(height: 10),
@@ -65,20 +60,6 @@ class _RegisterState extends State<Register> {
                       R_textFormField('Address'),
                       SizedBox(height: 10),
                       R_textFormField('Zip Code'),
-                      // SizedBox(height: 30),
-                      // Row(
-                      //   crossAxisAlignment: CrossAxisAlignment.start,
-                      //   children: [
-                      //     IconButton(
-                      //       color: Colors.themeColor,
-                      //       icon: Icon(Icons.circle),
-                      //     ),
-                      //     Expanded(
-                      //       child: Text(
-                      //           "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna"),
-                      //     )
-                      //   ],
-                      // ),
                       SizedBox(height: 30),
                       ElevatedButton(
                         style: buttonDesign,
